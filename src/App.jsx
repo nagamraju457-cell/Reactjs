@@ -7,15 +7,13 @@ import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Contact from './components/Contact'
 import Login from './components/login'
-
-import './App.css'
+import './components/App.css';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
    <>
-    <Home name="Raju" age="22"/>
     <Navbar />
    </>
   )
