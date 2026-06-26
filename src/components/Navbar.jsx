@@ -3,24 +3,39 @@ import Home from "./Home"
 import Contact from "./Contact"
 import Login from "./Login"
 
+import React from "react";
 
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <>
-    <Link to="/">Home</Link>
-    <Link to="/Contact">Contact</Link>
-    <Link to="/Login">Login</Link>
-    
+    <nav className="navbar">
 
-    <Routes>
+      <div className="logo">
+        <h2>CodeVerse</h2>
+      </div>
+
+      <ul className="nav-links">
+
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+
+        <li>
+          <Link to="/Login">Login</Link>
+        </li>
+
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+
+      </ul>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Login" element={<Login/>} />
     </Routes>
-     </>
-  )
+    </nav>
+  );
 }
 
-export default Navbar
