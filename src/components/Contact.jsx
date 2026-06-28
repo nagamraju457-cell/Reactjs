@@ -54,7 +54,7 @@ export default function Contact() {
         <div className="card">
           <h2>📍 Office Address</h2>
           <p>
-            Vaageswari Tech Park
+            CV Tech Park
             <br />
             Hyderabad
             <br />
@@ -64,13 +64,13 @@ export default function Contact() {
 
         <div className="card">
           <h2>📞 Phone</h2>
-          <p>+91 9876543210</p>
-          <p>+91 9876543211</p>
+          <p>+91 8464091858</p>
+          <p>+91 7032377379</p>
         </div>
 
         <div className="card">
           <h2>📧 Email</h2>
-          <p>support@company.com</p>
+          <p>nagamraju457@gmail.com</p>
           <p>contact@company.com</p>
         </div>
 
