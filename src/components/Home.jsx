@@ -1,19 +1,29 @@
+import Animate from "animate";
 import React from "react";
 import forest from "../assets/forest.jpeg";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+  }, []);
   return (
-    <div className="home">
+    <div className="home "  data-aos="zoom-in">
 
       {/* Hero Section */}
       <section
         className="hero"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url(${forest})`,
+          backgroundImage: `url(${forest})`,
         }}
       >
-        <div className="hero-content">
-          <h1>Welcome to My Website</h1>
+        <div className="hero-content animate__animated animate__zoomIn">
+          <h1>Welcome to Razz's Website</h1>
 
           <p>
             Building modern, responsive and user-friendly web applications
@@ -21,15 +31,15 @@ export default function Home() {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn-primary">Explore</button>
-            <button className="btn-secondary">Learn More</button>
+            <button className="btn-primary" data-aos="fade-right">Explore</button>
+            <button className="btn-secondary"data-aos="fade-left">Learn More</button>
           </div>
         </div>
       </section>
 
       {/* About */}
 
-      <section className="about">
+      <section className="about"  data-aos="fade-up"  data-aos-duration="3000">
 
         <h2>About Us</h2>
 
@@ -45,22 +55,23 @@ export default function Home() {
 
       <section className="stats">
 
-        <div className="stat-card">
+        <div className="stat-card" data-aos="fade-right">
           <h2>150+</h2>
           <p>Projects</p>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card" data-aos="fade-right"
+>
           <h2>100+</h2>
           <p>Happy Clients</p>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card" data-aos="fade-left">
           <h2>5+</h2>
           <p>Years Experience</p>
         </div>
 
-        <div className="stat-card">
+        <div className="stat-card" data-aos="fade-left">
           <h2>24/7</h2>
           <p>Support</p>
         </div>
@@ -69,27 +80,27 @@ export default function Home() {
 
       {/* Services */}
 
-      <section className="services">
+      <section className="services" data-aos="slide-up">
 
         <h2>Our Services</h2>
 
-        <div className="service-container">
+        <div className="service-container" data-aos="fade-up">
 
-          <div className="service-card">
+          <div className="service-card" data-aos="fade-right">
             <h3>💻 Web Development</h3>
             <p>
               Responsive and modern websites built with React.
             </p>
           </div>
 
-          <div className="service-card">
+          <div className="service-card" data-aos="zoom-in">
             <h3>📱 App Development</h3>
             <p>
               Mobile-friendly applications with attractive UI.
             </p>
           </div>
 
-          <div className="service-card">
+          <div className="service-card" data-aos="fade-left">
             <h3>☁ Cloud Solutions</h3>
             <p>
               Secure and scalable cloud deployment services.
@@ -102,23 +113,23 @@ export default function Home() {
 
       {/* Why Choose Us */}
 
-      <section className="choose">
+      <section className="choose" data-aos="zoom-in">
 
         <h2>Why Choose Us?</h2>
 
-        <div className="choose-container">
+        <div className="choose-container" data-aos="zoom-in">
 
-          <div className="choose-box">
+          <div className="choose-box" data-aos="fade-right">
             <h3>⚡ Fast</h3>
             <p>Optimized websites with excellent performance.</p>
           </div>
 
-          <div className="choose-box">
+          <div className="choose-box" data-aos="fade-up">
             <h3>🎨 Creative</h3>
             <p>Modern and attractive user interface designs.</p>
           </div>
 
-          <div className="choose-box">
+          <div className="choose-box" data-aos="fade-left">
             <h3>🔒 Secure</h3>
             <p>Reliable and secure web applications.</p>
           </div>
@@ -129,7 +140,7 @@ export default function Home() {
 
       {/* Call to Action */}
 
-      <section className="cta">
+      <section className="cta" data-aos="zoom-in">
 
         <h2>Ready to Start Your Project?</h2>
 

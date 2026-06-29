@@ -8,13 +8,17 @@ import Navbar from './components/Navbar'
 import Contact from './components/Contact'
 import Login from './components/login'
 import './components/App.css';
+import 'animate.css';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
    <>
-    <Navbar />
+  
+   
+   <div> <Navbar /></div>
+   
    </>
   )
 }

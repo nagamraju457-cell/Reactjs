@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import forest from "../assets/forest.jpeg";
+import 'animate.css'
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 
 export default function Contact() {
+   useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: false
+      });
+    }, []);
 
   const [form, setForm] = useState({
     name: "",
@@ -38,7 +48,7 @@ export default function Contact() {
     <div className="contact-page">
 
       {/* Hero Section */}
-      <section className="hero">
+      <section className="hero" data-aos="fade-up">
         <h1>Contact Us</h1>
 
         <p>
@@ -49,9 +59,9 @@ export default function Contact() {
       </section>
 
       {/* Contact Cards */}
-      <section className="cards">
+      <section className="cards" data-aos="flip-right">
 
-        <div className="card">
+        <div className="card" data-aos="flip-down">
           <h2>📍 Office Address</h2>
           <p>
             CV Tech Park
@@ -62,19 +72,19 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="card">
+        <div className="card"data-aos="flip-up">
           <h2>📞 Phone</h2>
           <p>+91 8464091858</p>
           <p>+91 7032377379</p>
         </div>
 
-        <div className="card">
+        <div className="card" data-aos="flip-down">
           <h2>📧 Email</h2>
           <p>nagamraju457@gmail.com</p>
           <p>contact@company.com</p>
         </div>
 
-        <div className="card">
+        <div className="card" data-aos="flip-up">
           <h2>🕒 Working Hours</h2>
           <p>Monday - Friday</p>
           <p>9:00 AM - 6:00 PM</p>
@@ -84,7 +94,7 @@ export default function Contact() {
 
       {/* Contact Form */}
 
-      <section className="form-section">
+      <section className="form-section" data-aos="slide-up">
 
         <div className="form-left">
 
@@ -166,7 +176,7 @@ export default function Contact() {
             projects, collaborations, or technical issues.
           </p>
 
-          <div className="social">
+          <div className="social" data-aos="slide-down">
 
             <button>Facebook</button>
             <button>Instagram</button>
@@ -181,13 +191,13 @@ export default function Contact() {
 
       {/* Google Map */}
 
-      <section className="map">
+      <section className="map" data-aos="zoom-out">
 
         <h2>Visit Our Office</h2>
 
         <iframe
           title="location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.317072613767!2d78.486671!3d17.385044"
+          src="https://www.google.com/maps/dir/17.4809934,78.4084697/Metro+Station+Kukatpally,+Kukatpally,+Hyderabad,+Telangana+500072/@17.4830103,78.4078963,17z/data=!3m1!4b1!4m19!1m9!3m8!1s0x3bcb91bc62c2da3d:0x5747396fb1a42c4c!2sMetro+Station+Kukatpally,+Kukatpally,+Hyderabad,+Telangana+500072!3b1!8m2!3d17.4849287!4d78.4118867!15sChxrdWthdHBhbGx5IG1ldHJvIHN0YXRpb24gbWFwkgERY29tcG91bmRfYnVpbGRpbmfgAQA!16s%2Fg%2F11f4prlnph!4m8!1m1!4e1!1m5!1m1!1s0x3bcb91bc62c2da3d:0x5747396fb1a42c4c!2m2!1d78.4118867!2d17.4849287?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D"
           width="100%"
           height="400"
           style={{ border: 0 }}
@@ -202,7 +212,7 @@ export default function Contact() {
 
         <h2>Frequently Asked Questions</h2>
 
-        <div className="question">
+        <div className="question" data-aos="fade-right">
 
           <h3>How quickly will I receive a response?</h3>
 
@@ -212,7 +222,7 @@ export default function Contact() {
 
         </div>
 
-        <div className="question">
+        <div className="question" data-aos="fade-left">
 
           <h3>Can I schedule a meeting?</h3>
 
@@ -223,7 +233,7 @@ export default function Contact() {
 
         </div>
 
-        <div className="question">
+        <div className="question" data-aos="fade-right">
 
           <h3>Do you offer technical support?</h3>
 
@@ -238,7 +248,7 @@ export default function Contact() {
 
       {/* Newsletter */}
 
-      <section className="newsletter">
+      <section className="newsletter" data-aos="zoom-out">
 
         <h2>Subscribe to Our Newsletter</h2>
 

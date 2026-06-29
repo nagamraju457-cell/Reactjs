@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import forest from "../assets/forest.jpeg";
+import 'animate.css'
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Login() {
+ useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: false
+      });
+    }, []);
+
   const [showPassword, setShowPassword] = useState(false);
 
   const [form, setForm] = useState({
@@ -59,7 +70,7 @@ export default function Login() {
 
         <form onSubmit={handleSubmit}>
 
-          <div className="input-box">
+          <div className="input-box" data-aos="fade-right">
             <span>📧</span>
 
             <input
@@ -71,7 +82,7 @@ export default function Login() {
             />
           </div>
 
-          <div className="input-box">
+          <div className="input-box" data-aos="fade-left">
             <span>🔒</span>
 
             <input
@@ -84,7 +95,7 @@ export default function Login() {
 
             <button
               type="button"
-              className="eye-btn"
+              className="eye-btn" data-aos="slide-up"
               onClick={() =>
                 setShowPassword(!showPassword)
               }
